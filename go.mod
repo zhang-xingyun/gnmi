@@ -1,4 +1,4 @@
-module gnmi_cli_test
+module gnmi_test
 
 go 1.25.5
 
