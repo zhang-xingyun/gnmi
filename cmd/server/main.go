@@ -11,9 +11,9 @@ import (
 	"google.golang.org/grpc"
 
 	pb "github.com/openconfig/gnmi/proto/gnmi"
-	gnmi "github.com/zhang-xingyun/gnmi_test/gnxi/gnmi"
-	"github.com/zhang-xingyun/gnmi_test/gnxi/gnmi/modeldata"
-	gpb "github.com/zhang-xingyun/gnmi_test/gnxi/gnmi/modeldata/gostruct"
+	gnmi "github.com/zhang-xingyun/gnmi/gnxi/gnmi"
+	"github.com/zhang-xingyun/gnmi/gnxi/gnmi/modeldata"
+	gpb "github.com/zhang-xingyun/gnmi/gnxi/gnmi/modeldata/gostruct"
 )
 
 func main() {
@@ -37,7 +37,8 @@ func main() {
 		reflect.TypeOf((*gpb.Device)(nil)),
 		gpb.SchemaTree["Device"],
 		gpb.Unmarshal,
-		gpb.ΛEnumTypes,
+		nil,
+		// gpb.ΛEnumTypes,
 	)
 
 	// 创建空配置
